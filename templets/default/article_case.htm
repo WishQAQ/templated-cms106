@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="robots" content="all"/>
+<meta name="author" content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="searchtitle" content=""/>
+<link href="/Public/images/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="/Public/css/font.css" />
+<link rel="stylesheet" type="text/css" href="/Public/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/Public/css/project_detail.css" />
+<script src="/Public/js/jquery-1.11.0.min.js"></script>
+<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+</head>
+<body >
+<!-- header -->
+{dede:include filename="head.htm"/}
+<!-- mainHead -->
+<div class="mainHead" >
+  <p class="title">{dede:field.title/}</p>
+  <p class="tag">作者：{dede:field.writer/}  时间：{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</p>
+</div>
+<!-- mainHead over -->
+<!-- main -->
+<div class="main" >
+  <div class="container">
+    {dede:field.body/}
+	<p></p>
+	<p></p>
+    <p>
+	{dede:productimagelist}
+	<img alt="[field:text/]" src="[field:imgsrc/]" style="height:791px; width:1200px" title="[field:text/]" /><br />
+	{/dede:productimagelist}
+	</p>
+  </div>
+</div>
+<!-- main over -->
+<!-- mainFoot -->
+<div class="mainFoot">
+  <div class="container">
+  {dede:type typeid='0' row=1}<a href="[field:typelink /]"><div class="mainFootBtn">返回列表</div></a>{/dede:type}
+    <div class="mainFootBtn on" id="BizQQWPA1">在线沟通</div>
+    <script>BizQQWPA.addCustom({aty: '0', a: '0', nameAccount: 800016368, selector: 'BizQQWPA1'});</script>
+  </div>
+</div>
+<!-- mainFoot over -->
+<!-- work -->
+<div class="work">
+  <p class="mainTitle">RELATED CASE</p>
+  <div class="mainSub"></div>
+  <span class="mainInfo">相关案例</span>
+  <div class="content">
+  
+  {dede:arclist row="5" typeid="2"}
+  <a href="[field:arcurl/]">
+    <div class="child"><img class="childImg" src="[field:picname/]" />
+      <div class="childHide">
+        <div class="childTag">
+          <p>VI</p>
+          <p>DESIGN</p>
+          <div class="childSub"></div>
+        </div>
+        <div class="childContent">
+          <p class="title">[field:title/]</p>
+          <p class="info">www.xunmoban.com</p>
+        </div>
+        <img class="childPointer" src="/Public/images/project/hidePointer.png"></div>
+    </div>
+    </a>
+	{/dede:arclist}
+	</div>
+</div>
+<!-- work over -->
+<!-- contact -->
+{dede:include filename="footer.htm"/}
+<!-- fixed over -->
+<!-- js -->
+<script src="/Public/js/jquery.easing.min.js"></script>
+<script src="/Public/js/jquery.nicescroll.min.js"></script>
+<script src="/Public/js/jquery.mousewheel.js"></script>
+<script src="/Public/js/base.js"></script>
+<script src="/Public/js/project_detail.js"></script>
+<!-- js over -->
+</body>
+</html>

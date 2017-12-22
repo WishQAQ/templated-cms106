@@ -1,0 +1,57 @@
+<div class="header"><a href="index.html"><img class="logo1" src="/public/images/logo.jpg" title=""></a><img class="navBtn" src="/public/images/navBtn.png" title="点我!点我!" />
+  <div class="container">
+    <ul class="nav">
+      <a href="/"><li {dede:field name=typeid runphp="yes"}(@me=="")? @me="   class='on'  ":@me="";{/dede:field}>首页</li></a>
+	  {dede:channel row="10" type="top" col="1" currentstyle="<a href='~typelink~'><li class='on'>~typename~</li></a>" }
+	  <a href="[field:typeurl/]"><li>[field:typename/]</li></a>
+	  {/dede:channel}
+    </ul>
+  </div>
+</div>
+<!-- header over-->
+<!-- list -->
+<div class="list">
+  <div class="container">
+    <div class="left"><span class="redTitle">Hi,are you ready?</span>
+      <p class="title">准备好开始了吗?<br />
+        那就与我们取得联系吧</p>
+      <p class="info">有一个品牌项目想和我们谈谈吗?您可以填写右边的表格，让我们了解您的项目需求，这是一个良好的开始，我们将会尽快与你取得联系。当然也欢迎您给我们写信或是打电话，让我们听到你的声音!</p>
+      <div class="footTitle"><span class="titleB">xunmoban</span><span>寻模板</span></div>
+      <p class="info">地 址：广州市天河区迎龙路161号</p>
+      <p class="info">电 话：020-00000000</p>
+      <p class="info">传 真：020-00000000</p>
+      <p class="info">E-mail：admin@XX.com</p>
+    </div>
+    <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+
+	<div class="right">
+      <p class="title">填写您的项目信息</p>
+      <p class="line">
+        <input type="text" name='xingming' class="inputText" id="listName" value="您的姓名" />
+      </p>
+      <p class="line">
+        <input type="text" name='gsmc' class="inputText" id="listCompany" value="公司名称" />
+      </p>
+      <p class="line">
+        <input type="text" name='dianhua' class="inputText" id="listEmail" value="您的电话" />
+      </p>
+      <p class="line">
+        <input type="text" name='xmzt' class="inputText" id="listTitle" value="项目主题" />
+      </p>
+      <p class="line">
+        <textarea name='neirong' class="textArea" id="listInfo">告诉我们您的项目基本信息</textarea>
+      </p>
+	  <input type="hidden" name="dede_fields" value="xingming,text;gsmc,text;dianhua,text;xmzt,text;neirong,multitext" />
+<input type="hidden" name="dede_fieldshash" value="28cf860fb5d27fc53e6ab36bb52e8f06" />
+      <p class="line">
+        <input type="submit" name="submit" class="inputBtn" value="立即提交" />
+      </p>
+    </div>
+	</form>
+
+  </div>
+  <img id="listCloseBtn" src="/public/images/closeIcon.png" /></div>
+<!-- list over -->

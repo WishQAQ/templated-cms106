@@ -1,0 +1,1 @@
+<a href="#"> <div class="child"><img src="[field:picname/]" alt="" title="" /></div></a>

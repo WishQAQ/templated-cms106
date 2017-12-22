@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="robots" content="all"/>
+<meta name="author" content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="searchtitle" content=""/>
+<link href="/public/images/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="/public/css/font.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/news.css" />
+<script src="/public/js/jquery-1.11.0.min.js"></script>
+<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+</head>
+<body >
+<!-- header -->
+{dede:include filename="head.htm"/}
+<!-- banner -->
+<div class="banner" style="background-image:url(/public/banner/1433261103.jpg);">
+  <div class="bannerInfo">
+    <p class="title">INFOMATION</p>
+    <p class="title">EVERYTHING IS FOR THE BUSINESS</p>
+    <span class="titleCh">了解我们 更超越我们</span></div>
+  <img class="bannerBg" src="/public/images/bannerBg.jpg" /></div>
+<!-- banner over -->
+<!-- main -->
+<div class="main">
+  <div class="mainNav">
+  <a href="/a/news/"><div class="child on">全部动态</div></a>
+  {dede:channel row="10" type="son" col="1"}
+  <a href="[field:typeurl/]"><div class="child">[field:typename/]</div></a>
+  {/dede:channel}
+  </div>
+  <div class="container">
+    <div class="content">
+	  {dede:list pagesize="10" infolen="400"}
+	  <div class="child">
+        <div class="childImg"><img src="[field:picname/]" /></div>
+        <div class="childInfo">
+          <p class="datetime">[field:pubdate function="MyDate('Y.m.d',@me)"/]</p>
+          <p class="title">[field:title/]</p>
+          <p class="info">[field:infos/]…</p>
+          <a href="[field:arcurl/]">
+          <div class="childBtn"><span>详细信息</span></div>
+          </a></div>
+      </div>
+	  {/dede:list}
+    </div>
+  </div>
+</div>
+<!-- main over -->
+<!-- contact -->
+{dede:include filename="footer.htm"/}
+<!-- fixed over -->
+<!-- js -->
+<script src="/public/js/jquery.easing.min.js"></script>
+<script src="/public/js/jquery.nicescroll.min.js"></script>
+<script src="/public/js/jquery.mousewheel.js"></script>
+<script src="/public/js/base.js"></script>
+<script src="/public/js/news.js"></script>
+<!-- js over -->
+</body>
+</html>
+<script src="/public/js/newsAjax.js"></script>
+<script>    setUrl('Home/News/indexAjax.html','/Home/News/detail','');
+</script>

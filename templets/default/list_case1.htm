@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="robots" content="all"/>
+<meta name="author" content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="searchtitle" content=""/>
+<link href="/public/images/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="/public/css/font.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/project.css" />
+<script src="/public/js/jquery-1.11.0.min.js"></script>
+<!--[if lt IE 9]><script src="../cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="../cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+</head>
+<body >
+<!-- header -->
+{dede:include filename="head.htm"/}
+<!-- banner -->
+<div class="banner" style="background-image:url(/public/banner/1433261141.jpg);">
+  <div class="bannerInfo">
+    <p class="title">PROJECT</p>
+    <p class="title">ACHIEVE BEYOND YOUR EXPECTATIONS</p>
+    <span class="titleCh">超越预期 做到你想不到</span></div>
+  <img class="bannerBg" src="/public/images/bannerBg.jpg" /></div>
+<!-- banner over -->
+<!-- main -->
+<div class="main">
+  <div class="mainNav">
+  <a href="/a/case/"><div class="child on">全部案例</div></a>
+  {dede:channel row="10" type="son" col="1"}
+  <a href="[field:typeurl/]"><div class="child">[field:typename/]</div></a>
+  {/dede:channel}
+  </div>
+  <div class="content">
+  {dede:list pagesize="10"}
+  <a href="[field:arcurl/]">
+    <div class="child"><img class="childImg" src="[field:picname/]" />
+      <div class="childHide">
+        <div class="childTag">
+          <div class="childSub"></div>
+        </div>
+        <div class="childContent">
+          <p class="title">[field:title/]</p>
+          <p class="info">www.xunmoban.com</p>
+        </div>
+        <img class="childPointer" src="/public/images/project/hidePointer.png"></div>
+    </div>
+    </a>
+	{/dede:list}
+	</div>
+  <a href="#">
+  <div class="linkBtn"><span>查看更多案例</span></div>
+  </a></div>
+<!-- main over -->
+<!-- contact -->
+{dede:include filename="footer.htm"/}
+<!-- fixed over -->
+<!-- js -->
+<script src="/public/js/jquery.easing.min.js"></script>
+<script src="/public/js/jquery.nicescroll.min.js"></script>
+<script src="/public/js/jquery.mousewheel.js"></script>
+<script src="/public/js/base.js"></script>
+<script src="/public/js/project.js"></script>
+<!-- js over -->
+</body>
+</html>
+<script src="/public/js/projectAjax.js"></script>
+<script>setNowIndex(-1);    setUrl('Home/Project/indexAjax.html','/Home/Project/detail','','');
+</script>

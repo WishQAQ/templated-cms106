@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="robots" content="all"/>
+<meta name="author" content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="searchtitle" content=""/>
+<link href="/public/images/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="/public/css/font.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/customer.css" />
+<script src="/public/js/jquery-1.11.0.min.js"></script>
+<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+</head>
+<body >
+<!-- header -->
+{dede:include filename="head.htm"/}
+<!-- banner -->
+<div class="banner" style="background-image:url(/public/banner/1433318724.jpg);">
+  <div class="bannerInfo">
+    <p class="title">PARTNERS</p>
+    <p class="title">CUSTOMER THEY ARE OUR PARTNERS</p>
+    <span class="titleCh">超过500个客户的共同见证</span></div>
+  <img class="bannerBg" src="/public/images/bannerBg.jpg" /></div>
+<!-- banner over -->
+<!-- main -->
+<div class="main">
+  <p class="mainTitle">CUSTOMER LIST</p>
+  <div class="mainSub"></div>
+  <span class="mainInfo">客户列表</span>
+  <div class="content">
+   {dede:list pagesize="28"}
+   <a href="#"> <div class="child"><img src="[field:picname/]" alt="" title="" /></div></a>
+   {/dede:list}
+  </div>
+</div>
+<!-- main over -->
+<!-- contact -->
+{dede:include filename="footer.htm"/}
+<!-- fixed over -->
+<!-- js -->
+<script src="/public/js/jquery.easing.min.js"></script>
+<script src="/public/js/jquery.nicescroll.min.js"></script>
+<script src="/public/js/jquery.mousewheel.js"></script>
+<script src="/public/js/base.js"></script>
+<script src="/public/js/customer.js"></script>
+<!-- js over -->
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="robots" content="all"/>
+<meta name="author" content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="searchtitle" content=""/>
+<link href="/public/images/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="/public/css/font.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/job.css" />
+<script src="/public/js/jquery-1.11.0.min.js"></script>
+<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+</head>
+<body >
+<!-- header -->
+{dede:include filename="head.htm"/}
+<!-- banner -->
+<div class="banner" style="background-image:url(/public/banner/1432914029.jpg);">
+  <div class="bannerInfo">
+    <p class="title">PARTNER</p>
+    <p class="title">WORK MORE THAN WORK</p>
+    <span class="titleCh">不只是工作 也可以是合作</span></div>
+  <img class="bannerBg" src="/public/images/bannerBg.jpg" /></div>
+<!-- banner over -->
+<!-- main -->
+<div class="main">
+  <p class="mainsTitle">看看有没有合适你的职位</p>
+  <div class="mainSub"></div>
+  <p class="mainsInfo">最新招聘信息</p>
+  <div class="container">
+    <div class="content">
+      {dede:list pagesize="5" infolen="80"}
+	  <div class="child" id="jobChild20">
+        <p class="name">[field:title/]</p>
+        <p class="nameEn">[field:infos/]…</p>
+        <div class="department">部门:[field:bumen/]<span class="sub">|</span>招聘人数:<span class="redSpan">[field:renshu/]人</span></div>
+        <div class="childPointer"></div>
+        <div class="childContent">
+          <p>任职要求：</p>
+          [field:body/]
+        </div>
+      </div>
+	  {/dede:list}
+    </div>
+    <div class="foot">
+      <p class="redTitle">应聘流程:</p>
+      <p class="info1">首先请留意上面的招聘信息是否有合适你的职位。详细阅读职位要求并向我们发送你的个人简历以及相关作品，我们将安排专人评审您的应聘邮件，通过对简历进行筛选进入以下流程》面试/复试》确认入职时间》报到》试用》入职</p>
+      <p class="title">薪金要求：请于邮件内写明。</p>
+      <p class="info2">试用期：3个月</p>
+      <p class="info2">上班时间：周一至周六，早上9:00-12:00，下午13:00-18:00</p>
+      <p class="info2">有意者请发简历、作品和近照至 <span>admin@XX.com</span>合则约见</p>
+    </div>
+  </div>
+</div>
+<!-- main over -->
+<!-- contact -->
+{dede:include filename="footer.htm"/}
+<!-- fixed over -->
+<!-- js -->
+<script src="/public/js/jquery.easing.min.js"></script>
+<script src="/public/js/jquery.nicescroll.min.js"></script>
+<script src="/public/js/jquery.mousewheel.js"></script>
+<script src="/public/js/base.js"></script>
+<script src="/public/js/job.js"></script>
+<!-- js over -->
+</body>
+</html>

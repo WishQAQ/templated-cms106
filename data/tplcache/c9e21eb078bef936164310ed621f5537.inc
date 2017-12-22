@@ -1,0 +1,1 @@
+<img alt="[field:text/]" src="[field:imgsrc/]" style="height:791px; width:1200px" title="[field:text/]" /><br />
